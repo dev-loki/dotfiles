@@ -220,6 +220,7 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-g
 " Plug 'Shougo/defx.nvim' | Plug 'kristijanhusak/defx-git'
 
 " Random stuff
+Plug 'mechatroner/rainbow_csv'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
