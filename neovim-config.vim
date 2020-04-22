@@ -1,6 +1,7 @@
 " general settings
 filetype plugin on
 filetype indent on
+set splitbelow splitright
 set nobackup
 set nowritebackup
 set encoding=utf-8
