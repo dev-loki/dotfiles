@@ -227,6 +227,7 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-g
 " Plug 'Shougo/defx.nvim' | Plug 'kristijanhusak/defx-git'
 
 " Random stuff
+Plug 'vim-vdebug/vdebug'
 Plug 'mechatroner/rainbow_csv'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -253,6 +254,13 @@ call plug#end()
 " let ayucolor = "dark"     " for ayu
 colorscheme srcery " ayu
 let g:srcery_italic = 1   " for srcery
+
+" Vdebugger
+let g:vdebug_options = {}
+let g:vdebug_options.watch_window_style = 'compact'
+let g:vdebug_options.path_maps = {
+    \ "/home/doc-sach/current/": "/home/torsten/Projects/doc-snuggles/",
+    \ }
 
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
