@@ -18,7 +18,7 @@ export PATH=$PATH:~/.config/composer/vendor/bin/
 export npm_config_prefix=~/.node_modules
 
 # Oh My ZSH Stuff
-export ZSH="/home/nfl4g/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="dstufft"
 # ZSH_THEME="fino-time" # needs rvm-prompt
 # ZSH_THEME="suvash"
@@ -138,6 +138,9 @@ check () {
 }
 
 source $HOME/.oh-my-zsh/custom/plugins/calc.plugin.zsh/calc.plugin.zsh
-unalias fd
 alias v="nvim"
 alias vim="nvim"
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
