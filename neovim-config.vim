@@ -132,10 +132,15 @@ noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
 
 " Easier split pane movement
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map <down> <C-W>j
+map <up> <C-W>k
+map <left> <C-W>h
+map <right> <C-W>l
+
+noremap <silent> <C-left> :vertical resize +5<CR>
+noremap <silent> <C-right> :vertical resize -5<CR>
+noremap <silent> <C-up> :resize +5<CR>
+noremap <silent> <C-down> :resize -5<CR>
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
