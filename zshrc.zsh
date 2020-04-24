@@ -138,5 +138,6 @@ check () {
 }
 
 source $HOME/.oh-my-zsh/custom/plugins/calc.plugin.zsh/calc.plugin.zsh
+unalias fd
 alias v="nvim"
 alias vim="nvim"
