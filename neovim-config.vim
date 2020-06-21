@@ -86,7 +86,7 @@ set wildignore=.o,*~,*.pyc,*/.git/*  " ignore compiled files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Ctags
-"set tags=./tags,./.tags,$HOME/vimtags,$HOME/.vimtags
+set tags=./tags,./.tags,$HOME/vimtags,$HOME/.vimtags
 
 " key remaps
 nnoremap j gj
@@ -244,6 +244,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'nicwest/vim-camelsnek'
 Plug 'tpope/vim-surround'
 
+" html
+Plug 'mattn/emmet-vim'
+
 " Git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
@@ -259,7 +262,7 @@ let g:srcery_italic = 1   " for srcery
 let g:vdebug_options = {}
 let g:vdebug_options.watch_window_style = 'compact'
 let g:vdebug_options.path_maps = {
-    \ "/home/doc-sach/current/": "/home/torsten/Projects/doc-snuggles/",
+    \ "/home/doc-sach/current/": $HOME."/Projects/doc-snuggles/",
     \ }
 
 " Editorconfig
@@ -346,6 +349,9 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
+" PH Specific
+autocmd FileType php set iskeyword+=$
+
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -415,7 +421,7 @@ nnoremap ]r :ALENextWrap<CR>     " move to the next ALE warning / error
 nnoremap [r :ALEPreviousWrap<CR> " move to the previous ALE warning / error
 
 " vimwiki
-let g:vimwiki_list = [{'path': '/media/c/Dokumente/vimwiki/'}]
+let g:vimwiki_list = [{'path': $HOME.'/.vimwiki/'}]
 
 " Defx settings (Defaults)
 " autocmd FileType defx call s:defx_my_settings()

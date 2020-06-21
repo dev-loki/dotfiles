@@ -137,6 +137,16 @@ check () {
   php ./vendor/bin/phpcs -p `(git diff --name-only --cached --diff-filter=ACMR; git diff --name-only --diff-filter=ACMR) | sort | uniq | tr '\n' ' '`
 }
 
+checkall () {
+  clear
+  echo 'Check PHPStan'
+  php ./vendor/bin/phpstan analyze src config
+  echo "\nCheck PHP Codesniffer"
+  php ./vendor/bin/phpcs -p src config
+  echo "\nPHPUnit"
+  php ./vendor/bin/phpunit
+}
+
 source $HOME/.oh-my-zsh/custom/plugins/calc.plugin.zsh/calc.plugin.zsh
 alias v="nvim"
 alias vim="nvim"
