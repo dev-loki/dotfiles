@@ -73,9 +73,9 @@ alias la='lsd -a'
 alias ll='lsd -l'
 alias lla='lsd -la'
 alias mkdir="mkdir -p"
-alias y=yay
-alias yi="yay -Sy --noanswerclean --answerdiff=None --noansweredit --noanswerupgrade"
-alias yu="yay -Syu --noanswerclean --noanswerdiff --noansweredit --noanswerupgrade"
+alias y='yay --sudoloop'
+alias yi="yay -Sy --sudoloop --noanswerclean --answerdiff=None --noansweredit --noanswerupgrade"
+alias yu="yay -Syu --sudoloop --noanswerclean --noanswerdiff --noansweredit --noanswerupgrade"
 alias yrm="yay -Runsc"
 alias v=nvim
 alias q=exit
