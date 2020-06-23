@@ -74,8 +74,8 @@ alias ll='lsd -l'
 alias lla='lsd -la'
 alias mkdir="mkdir -p"
 alias y='yay --sudoloop'
-alias yi="yay -Sy --sudoloop --noanswerclean --answerdiff=None --noansweredit --noanswerupgrade"
-alias yu="yay -Syu --sudoloop --noanswerclean --noanswerdiff --noansweredit --noanswerupgrade"
+alias yi="yay -Sy --sudoloop --nocleanmenu --noeditmenu --noupgrademenu"
+alias yu="yay -Syu --sudoloop --nocleanmenu --nodiffmenu --noeditmenu"
 alias yrm="yay -Runsc"
 alias v=nvim
 alias q=exit
@@ -84,7 +84,6 @@ alias rmdockers="docker system prune -a"
 alias cat=bat
 
 # fzf
-
 function f(){
   fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
                  echo {} is a binary file ||
