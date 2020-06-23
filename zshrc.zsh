@@ -154,3 +154,5 @@ alias vim="nvim"
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
+
+test -f "$HOME/.zshrc.local" && source "$HOME/.zshrc.local"
