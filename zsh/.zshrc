@@ -7,11 +7,11 @@ fi
 
 export PATH=$PATH:$HOME/.pub-cache/bin:$HOME/.deta/bin
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-export ZSH="/home/lokidev/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
-  archlinux
+  # archlinux
   autojump
   aws
   colorize
@@ -42,7 +42,6 @@ plugins=(
 
 # if mac system
 # if archlike system
-
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/plugins/calc.plugin.zsh/calc.plugin.zsh
